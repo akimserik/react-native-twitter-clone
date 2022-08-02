@@ -39,7 +39,7 @@ export type UserType = {
   id: string;
   username: string;
   name: string;
-  image: string;
+  image?: string;
 };
 
 export type TweetType = {

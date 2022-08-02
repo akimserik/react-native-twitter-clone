@@ -12,9 +12,8 @@ import {
 } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import * as React from "react";
-import { ColorSchemeName, Image, Pressable } from "react-native";
+import { ColorSchemeName, Pressable } from "react-native";
 import Ionicon from "react-native-vector-icons/Ionicons";
-import FontAwesome5Icon from "react-native-vector-icons/FontAwesome5";
 
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
@@ -114,7 +113,7 @@ function BottomTabNavigator() {
                 name="city"
                 size={25}
                 color={Colors[colorScheme].tint}
-                style={{ marginRight: 15 }}
+                style={{ marginRight: 10 }}
               />
             </Pressable>
           ),
@@ -122,7 +121,7 @@ function BottomTabNavigator() {
             <ProfilePicture image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWpQ_0xqMyhrzhvYGbK6AVR7OFrKoNaJ0_mvMv0rLlptDfTWgxTvB8US_t8_Ak92lm9G0&usqp=CAU" />
           ),
           headerLeftContainerStyle: {
-            marginLeft: 15,
+            marginLeft: 10,
           },
         })}
       />
