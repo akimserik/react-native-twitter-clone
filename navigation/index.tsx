@@ -29,6 +29,9 @@ import {
 import LinkingConfiguration from "./LinkingConfiguration";
 import ProfilePicture from "../components/ProfilePicture";
 import EcittyLogoIcon from "../components/Logo";
+import NewTweetScreen from "../screens/NewTweetScreen";
+import CityDropdown from "../components/CityDropdown";
+import { CITIES } from "../data/cities";
 
 export default function Navigation({
   colorScheme,
@@ -57,6 +60,13 @@ function RootNavigator() {
       <Stack.Screen
         name="Root"
         component={BottomTabNavigator}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="NewTweet"
+        component={NewTweetScreen}
         options={{
           headerShown: false,
         }}
@@ -99,10 +109,6 @@ function BottomTabNavigator() {
             <Ionicon name="md-home" color={color} size={25} />
           ),
           headerTitle: () => (
-            <EcittyLogoIcon color={Colors[colorScheme].tint} />
-          ),
-          headerTitleAlign: "center",
-          headerRight: () => (
             <Pressable
               onPress={() => navigation.navigate("Modal")}
               style={({ pressed }) => ({
@@ -111,14 +117,24 @@ function BottomTabNavigator() {
             >
               <FontAwesome5
                 name="city"
-                size={25}
+                size={23}
                 color={Colors[colorScheme].tint}
-                style={{ marginRight: 10 }}
               />
             </Pressable>
           ),
+          headerTitleAlign: "center",
+          headerRight: () => (
+            <CityDropdown label="City:" data={CITIES} onSelect={() => {}} />
+          ),
           headerLeft: () => (
-            <ProfilePicture image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWpQ_0xqMyhrzhvYGbK6AVR7OFrKoNaJ0_mvMv0rLlptDfTWgxTvB8US_t8_Ak92lm9G0&usqp=CAU" />
+            <Pressable
+              onPress={() => navigation.navigate("Modal")}
+              style={({ pressed }) => ({
+                opacity: pressed ? 0.5 : 1,
+              })}
+            >
+              <ProfilePicture image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWpQ_0xqMyhrzhvYGbK6AVR7OFrKoNaJ0_mvMv0rLlptDfTWgxTvB8US_t8_Ak92lm9G0&usqp=CAU" />
+            </Pressable>
           ),
           headerLeftContainerStyle: {
             marginLeft: 10,
