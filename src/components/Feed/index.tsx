@@ -4,7 +4,7 @@ import tweets from "../../data/tweets";
 import TweetComponent from "../Tweet";
 
 import { DataStore } from '@aws-amplify/datastore';
-import { Tweet } from '../../src/models';
+import { Tweet } from '../../../src/models';
 
 const Feed = () => {
   const [tweets, setTweets] = useState<Tweet[]>([])
