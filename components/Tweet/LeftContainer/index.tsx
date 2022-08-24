@@ -1,10 +1,11 @@
 import React from "react";
 import { Text, View } from "react-native";
+import {User} from "../../../src/models";
 import { UserType } from "../../../types";
 import ProfilePicture from "../../ProfilePicture";
 
 export type LeftContainerProps = {
-  user: UserType;
+  user?: User | null;
 };
 
 const DUMMY_USER_IMAGE =

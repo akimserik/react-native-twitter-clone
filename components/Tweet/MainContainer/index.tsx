@@ -2,20 +2,21 @@ import { Entypo } from "@expo/vector-icons";
 import moment from "moment";
 import React from "react";
 import { Image, Text, View } from "react-native";
+import {Tweet} from "../../../src/models";
 import { TweetType } from "../../../types";
 import Footer from "../Footer";
 import styles from "./styles";
 
 export type MainContainerProps = {
-  tweet: TweetType;
+  tweet: Tweet;
 };
 
 const MainContainer = ({ tweet }: MainContainerProps) => (
   <View style={styles.mainContainer}>
     <View style={styles.tweetHeaderContainer}>
       <View style={styles.tweetHeaderNames}>
-        <Text style={styles.name}>{tweet?.user?.name}</Text>
-        <Text style={styles.username}>@{tweet?.user?.username}</Text>
+        <Text style={styles.name}>{tweet?.User?.name}</Text>
+        <Text style={styles.username}>@{tweet?.User?.username}</Text>
         <Text style={styles.createdAt}>
           {moment(tweet.createdAt).fromNow()}
         </Text>
@@ -26,11 +27,11 @@ const MainContainer = ({ tweet }: MainContainerProps) => (
       <View style={styles.tweetContentText}>
         <Text>{tweet.content}</Text>
       </View>
-      {tweet?.image && (
+      {/* {tweet?.image && (
         <Image source={{ uri: tweet.image }} style={styles.tweetContentImage} />
-      )}
+      )} */}
     </View>
-    <Footer tweet={tweet} />
+    {/* <Footer tweet={tweet} /> */}
   </View>
 );
 
