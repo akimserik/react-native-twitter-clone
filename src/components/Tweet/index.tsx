@@ -1,7 +1,6 @@
 import React from "react";
 import { Text, View } from "react-native";
-import {Tweet} from "../../src/models";
-import { TweetType } from "../../types";
+import { Tweet } from "../../models";
 import LeftContainer from "./LeftContainer";
 import MainContainer from "./MainContainer";
 import styles from "./styles";

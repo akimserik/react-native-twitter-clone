@@ -4,7 +4,7 @@ import { StyleSheet, Text, TextInput, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { View } from "../components/Themed";
 import Colors from "../constants/Colors";
-import { RootTabScreenProps } from "../types";
+import { RootTabScreenProps } from "../../types";
 
 export default function NewTweetScreen({
   navigation,
@@ -33,7 +33,7 @@ export default function NewTweetScreen({
           numberOfLines={20}
           placeholder="write something..."
           value={tweet}
-          onChangeText={e => setTweet(e)}
+          onChangeText={(e) => setTweet(e)}
         />
       </View>
     </SafeAreaView>

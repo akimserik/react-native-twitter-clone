@@ -13,7 +13,6 @@ const Feed = () => {
   const getTweets = async () => {
     setIsLoading(true);
     const models = await DataStore.query(Tweet);
-    console.log(models);
     setTweets(models);
     setIsLoading(false);
   };

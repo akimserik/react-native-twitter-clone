@@ -25,7 +25,7 @@ import {
   RootStackParamList,
   RootTabParamList,
   RootTabScreenProps,
-} from "../types";
+} from "../../types";
 import LinkingConfiguration from "./LinkingConfiguration";
 import ProfilePicture from "../components/ProfilePicture";
 import EcittyLogoIcon from "../components/Logo";
