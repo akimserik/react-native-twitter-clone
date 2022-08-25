@@ -2,6 +2,7 @@ type Tweet @model @auth(rules: [{allow: public}]) {
   id: ID!
   content: String
   User: User @hasOne
+  image: String
 }
 
 type User @model @auth(rules: [{allow: public}]) {
@@ -10,5 +11,5 @@ type User @model @auth(rules: [{allow: public}]) {
   name: String
   email: AWSEmail
   image: String
-  Tweet: Tweet @belongsTo
 }
+ 

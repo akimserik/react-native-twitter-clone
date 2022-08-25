@@ -27,9 +27,16 @@ export const schema = {
                     "attributes": [],
                     "association": {
                         "connectionType": "HAS_ONE",
-                        "associatedWith": "Tweet",
+                        "associatedWith": "id",
                         "targetName": "tweetUserId"
                     }
+                },
+                "image": {
+                    "name": "image",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
                 },
                 "createdAt": {
                     "name": "createdAt",
@@ -118,19 +125,6 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "Tweet": {
-                    "name": "Tweet",
-                    "isArray": false,
-                    "type": {
-                        "model": "Tweet"
-                    },
-                    "isRequired": false,
-                    "attributes": [],
-                    "association": {
-                        "connectionType": "BELONGS_TO",
-                        "targetName": "userTweetId"
-                    }
-                },
                 "createdAt": {
                     "name": "createdAt",
                     "isArray": false,
@@ -176,5 +170,5 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "version": "4c811ce27d39b2cc0fa7f9b8d3e4fca5"
+    "version": "eb9af3aeb94fff3833ac3cc363622c26"
 };

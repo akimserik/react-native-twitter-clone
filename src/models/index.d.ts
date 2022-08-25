@@ -16,6 +16,7 @@ export declare class Tweet {
   readonly id: string;
   readonly content?: string | null;
   readonly User?: User | null;
+  readonly image?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
   readonly tweetUserId?: string | null;
@@ -29,7 +30,6 @@ export declare class User {
   readonly name?: string | null;
   readonly email?: string | null;
   readonly image?: string | null;
-  readonly Tweet?: Tweet | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
   constructor(init: ModelInit<User, UserMetaData>);
